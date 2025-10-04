@@ -1,0 +1,26 @@
+h1,h2{
+    color: darkblue;
+}
+p{
+    color: darkgreen;
+}
+.H{
+    background-color: darkgray;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+    color: gold;
+    font-weight: bolder;
+
+}
+div>ul>li{
+    background-color: aqua;
+    color: blue;
+    margin: 5px;
+    border: 200px;
+}
+a:hover{
+    color: red;
+}
+p::first-letter { font-size: 24px; color: green; }
