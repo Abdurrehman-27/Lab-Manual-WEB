@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Experiment 6 – Web Responsiveness</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            background-color: antiquewhite;
+        }
+
+        h1, h2, h3, #center {
+            text-align: center;
+            color: navy;
+        }
+
+        ol li {
+            margin: 8px 0;
+        }
+
+        
+        .container{
+            border: 2px solid navy;
+            padding: 20px;
+            width: 60%;
+            margin: auto;
+            background: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+        }
+
+        
+        #desktop-list {
+            display: block;
+        }
+
+        
+        #mobile-list {
+            display: none;
+        }
+
+        
+        #desktop-list li:last-child {
+            align-self: flex-end;  
+        }
+
+        
+        @media(max-width: 480px){
+
+            body{
+                background-color: aqua;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .container{
+                width: 90%;
+                padding: 15px;
+            }
+
+            
+            #desktop-list{
+                display: none;
+            }
+
+            
+            #mobile-list{
+                display: block;
+                color: blue;
+                font-weight: bold;
+            }
+
+            
+            #mobile-list li:last-child{
+                align-self: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Web Technologies Handout</h1>
+    <h2>Course: CSS-336 (2+1)</h2>
+
+    <p id="center">Semester: Fall 2025</p>
+
+    <h3>Name: ______ | Registration ID: ______</h3>
+
+    <p style="text-align:center;">Following are the list of experiments:</p>
+
+    
+    <div class="container">
+
+        
+        <ol id="desktop-list">
+            <li>Experiment 1: Introduction to HTML Basics</li>
+            <li>Experiment 2: Creating and Publishing an Online Lab Manual</li>
+            <li>Experiment 3: Working with Tables, Lists, Images, and Hyperlinks</li>
+            <li>Experiment 4: Applying CSS to HTML (Inline, Internal, External)</li>
+            <li>Experiment 5: Exploring CSS Selectors</li>
+            <li>Experiment 6: Web Responsiveness</li>
+        </ol>
+
+        
+        <ol id="mobile-list">
+            <li>Lab 1</li>
+            <li>Lab 2</li>
+            <li>Lab 3</li>
+            <li>Lab 4</li>
+            <li>Lab 5</li>
+            <li>Lab 6</li>
+        </ol>
+
+    </div>
+<a href="lab5.html">Click here to access Lab 5</a>
+</body>
+</html>
