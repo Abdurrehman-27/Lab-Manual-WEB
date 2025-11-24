@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>JavaScript Lab Tasks</title>
+</head>
+<body>
+
+    <h2>JavaScript Lab Tasks</h2>
+
+    
+    <button onclick="task1()">Task 1: Get Student Info</button>
+    <br><br>
+
+    <button onclick="task2()">Task 2: Arithmetic and Comparison</button>
+
+    <script>
+        function task1(){
+            let name = prompt("Enter your Name:");
+            let reg = prompt("Enter your Registration ID:");
+
+            alert("Name: " + name + "\nRegistration ID: " + reg);
+
+            console.log("Name (string):", name);
+            console.log("Registration ID (string):", reg);
+        }
+
+        function task2(){
+            let num1 = prompt("Enter first number:");
+            let num2 = prompt("Enter second number:");
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            let sum = num1 + num2;
+            let diff = num1 - num2;
+            let prod = num1 * num2;
+            let quot = num1 / num2;
+            let comp = num1 > num2;
+
+            alert(
+                "Sum: " + sum +
+                "\nDifference: " + diff +
+                "\nProduct: " + prod +
+                "\nQuotient: " + quot +
+                "\nIs num1 > num2? " + comp
+            );
+
+            
+            console.log("num1 type:", typeof num1);
+            console.log("num2 type:", typeof num2);
+            console.log("Sum:", sum);
+            console.log("Difference:", diff);
+            console.log("Product:", prod);
+            console.log("Quotient:", quot);
+            console.log("Comparison (num1 > num2):", comp);
+        }
+    </script>
+
+</body>
+</html>

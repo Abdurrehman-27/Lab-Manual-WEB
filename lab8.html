@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive JavaScript Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: whitesmoke;
+            padding: 40px;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            display: inline-block;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: lightgray;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        #circle {
+            width: 120px;
+            height: 120px;
+            background-color: skyblue;
+            border-radius: 50%;
+            margin: 20px auto;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        button {
+            margin: 15px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 20px;
+            margin-top: 30px;
+            color: navy;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Interactive JavaScript Experiment</h2>
+    <p>Click the items below to see different interactions:</p>
+
+    <div id="box1" class="box"> </div>
+    <div id="box2" class="box"> </div>
+    <div id="box3" class="box"> </div>
+
+    <div id="circle"></div>
+
+    <button id="showTextBtn">Show Message</button>
+
+    <p id="message"></p>
+
+    <script>
+
+        document.getElementById("box1").addEventListener("click", function() {
+            this.style.backgroundColor = "lightgreen";
+        });
+
+        document.getElementById("box2").addEventListener("click", function() {
+            this.style.width = "180px";
+            this.style.height = "180px";
+        });
+
+        document.getElementById("box3").addEventListener("click", function() {
+            if(this.style.opacity === "0"){
+                this.style.opacity = "1";
+            } else {
+                this.style.opacity = "0";
+            }
+        });
+
+        let moved = false;
+        document.getElementById("circle").addEventListener("click", function() {
+            if(!moved){
+                this.style.transform = "translateX(120px)";
+                moved = true;
+            } else {
+                this.style.transform = "translateX(0px)";
+                moved = false;
+            }
+        });
+
+        document.getElementById("showTextBtn").addEventListener("click", function(){
+            document.getElementById("message").textContent = "Hello! This is DOM manipulation in action.";
+        });
+
+    </script>
+
+</body>
+</html>
